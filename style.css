@@ -7,6 +7,7 @@
 
 nav {
   background: linear-gradient(to top, rgb(28, 55, 93), rgb(4, 17, 37));
+
   text-align: center;
   padding: 15px 0px 15px 0px;
   position: sticky;
@@ -20,33 +21,37 @@ nav a {
 }
 
 main {
-  background: linear-gradient(to top, rgb(245, 250, 255), rgb(212, 234, 255));
-  min-height: 100vh;
+  background: linear-gradient(
+    to right top,
+    rgb(245, 209, 245),
+    rgb(212, 234, 255)
+  );
+
   padding: 50px 100px;
 
-  /* display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
+}
 
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  gap: 40px;
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
-  text-align: center;
-  gap: 12px;
+  align-items: start;
+  text-align: justify;
+  gap: 10px;
   border: 1px solid rgba(28, 55, 93, 0.466);
-  padding: 15px;
-  height: 275px;
-  /* width: 400px; */
+  padding: 25px;
+  height: auto;
+  width: 80%;
   transition: all 0.25s ease-in-out;
   border-radius: 2px;
 }
@@ -57,10 +62,25 @@ main {
 .title {
   font-size: 1.3rem;
 }
-.self-text {
-  font-size: 1.1rem;
-  margin-top: 12px;
-  color: rgb(28, 55, 93);
+
+.md {
+  text-align: justify;
+  line-height: 1.25;
+}
+
+.md p {
+  margin: 5px 0px;
+}
+
+.md ul {
+  margin-left: 19px;
+}
+
+.md ol {
+  margin-left: 19px;
+}
+.md hr {
+  margin: 20px 0px;
 }
 
 .link {
@@ -69,7 +89,7 @@ main {
   font-size: 1.1rem;
   border-radius: 2px;
 
-  padding: 7px 12px;
+  padding: 7px 15px;
   color: aliceblue;
   transition: all 0.25s ease-in-out;
 }
@@ -78,5 +98,6 @@ main {
 }
 .score {
   font-size: 1.1rem;
+  color: rgb(202, 13, 13);
   font-weight: 700;
 }

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 17px;
 }
 body {
   width: 100%;
@@ -11,14 +11,16 @@ body {
 }
 
 nav {
+  width: 100%;
   background: linear-gradient(to top, rgb(28, 55, 93), rgb(4, 17, 37));
   text-align: center;
   padding: 15px 0px 15px 0px;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 nav a {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: aliceblue;
   text-decoration: none;
@@ -44,7 +46,7 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  text-align: justify;
+  text-align: start;
   gap: 10px;
   border: 1px solid rgba(28, 55, 93, 0.8);
   padding: 25px;
@@ -56,18 +58,26 @@ main {
 
 .card:hover {
   box-shadow: 0px 0px 15px 0px rgba(28, 55, 93, 0.4);
+  transform: translateY(-5px);
 }
 .title {
   font-size: 1.3rem;
+  line-break: anywhere;
 }
 
 .md {
-  text-align: justify;
   line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
 }
 
 .md p {
   margin: 5px 0px;
+  line-break: anywhere;
+  white-space: pre-wrap;
 }
 
 .md ul {
@@ -79,6 +89,18 @@ main {
 }
 .md hr {
   margin: 20px 0px;
+}
+
+.md pre {
+  text-align: start;
+
+  background-color: rgba(255, 255, 255, 0.507);
+  padding: 10px;
+  border-radius: 2px;
+}
+.md pre code {
+  line-break: anywhere;
+  white-space: pre-wrap;
 }
 
 .link {
@@ -98,4 +120,90 @@ main {
   font-size: 1.1rem;
   color: rgb(202, 13, 13);
   font-weight: 700;
+}
+
+.up a {
+  display: inline;
+  background-color: rgb(28, 55, 93);
+  color: aliceblue;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.up a:hover {
+  background-color: rgb(57, 97, 151);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 720px) {
+  nav a {
+    font-size: 1.3rem;
+  }
+  .loading {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 30px 60px;
+  }
+
+  .card {
+    width: 90%;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+  .md pre code {
+    font-size: 0.9rem;
+  }
+
+  .up a {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  nav a {
+    font-size: 1.2rem;
+  }
+  .loading {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+  .md pre code {
+    font-size: 0.8rem;
+  }
+
+  .up a {
+    font-size: 1rem;
+  }
 }

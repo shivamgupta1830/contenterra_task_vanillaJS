@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 17px;
+  font-size: 16px;
 }
 body {
   width: 100%;
@@ -72,12 +72,13 @@ main {
   justify-content: start;
   align-items: start;
   flex-wrap: wrap;
+  font-size: 1.1rem;
+  line-break: anywhere;
+  white-space: pre-wrap;
 }
 
 .md p {
   margin: 5px 0px;
-  line-break: anywhere;
-  white-space: pre-wrap;
 }
 
 .md ul {
@@ -93,12 +94,12 @@ main {
 
 .md pre {
   text-align: start;
-
   background-color: rgba(255, 255, 255, 0.507);
   padding: 10px;
   border-radius: 2px;
 }
 .md pre code {
+  font-size: 1rem;
   line-break: anywhere;
   white-space: pre-wrap;
 }
@@ -133,7 +134,7 @@ main {
   text-decoration: none;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 15px;
 }
 .up a:hover {
   background-color: rgb(57, 97, 151);
@@ -160,6 +161,12 @@ main {
   .title {
     font-size: 1.2rem;
   }
+  .md {
+    font-size: 1rem;
+  }
+  .md pre code {
+    font-size: 0.9rem;
+  }
 
   .link {
     font-size: 1rem;
@@ -167,9 +174,6 @@ main {
 
   .score {
     font-size: 1rem;
-  }
-  .md pre code {
-    font-size: 0.9rem;
   }
 
   .up a {
@@ -191,6 +195,12 @@ main {
   .title {
     font-size: 1.1rem;
   }
+  .md {
+    font-size: 0.9rem;
+  }
+  .md pre code {
+    font-size: 0.8rem;
+  }
 
   .link {
     font-size: 1rem;
@@ -198,9 +208,6 @@ main {
 
   .score {
     font-size: 1rem;
-  }
-  .md pre code {
-    font-size: 0.8rem;
   }
 
   .up a {
